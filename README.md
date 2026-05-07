@@ -44,6 +44,12 @@ Sign up here:
 
 ---
 
+## Official SDKs
+
+- JavaScript: https://github.com/mathcelebrity/js-sdk
+- Python: https://github.com/mathcelebrity/python-sdk
+- PHP: https://github.com/mathcelebrity/php-sdk
+
 ### 2. Example Request
 
 ```bash
