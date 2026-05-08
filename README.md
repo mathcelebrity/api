@@ -51,9 +51,9 @@ Sign up here:
 - PHP: https://github.com/mathcelebrity/php-sdk
 
 ## Install Packages
-- Node.js: 'npm install mathcelebrity-sdk'
-- Python: 'pip install mathcelebrity'
-- PHP: 'composer require mathcelebrity/sdk'
+- Node.js: `npm install mathcelebrity-sdk`
+- Python: `pip install mathcelebrity`
+- PHP: `composer require mathcelebrity/sdk`
 
 ### 2. Example Request
 
