@@ -5,7 +5,8 @@ info:
   version: 1.0.0
   description: |
     Official MathCelebrity API for solving math problems,
-    generating quizzes, and educational automation.
+    generating quizzes, educational automation,
+    definitions, anagrams, sudoku puzzles, and more.
 
   contact:
     name: MathCelebrity
@@ -18,10 +19,27 @@ servers:
 tags:
   - name: Solve
     description: Solve math problems
+
   - name: Quiz
     description: Generate quizzes
+
   - name: Random
     description: Random math generation
+
+  - name: Anagram
+    description: Generate and solve anagrams
+
+  - name: Define
+    description: Define mathematical terms
+
+  - name: Products
+    description: Product and calculator listings
+
+  - name: Subjects
+    description: Educational subject listings
+
+  - name: Sudoku
+    description: Generate sudoku puzzles
 
 paths:
 
@@ -120,6 +138,125 @@ paths:
       responses:
         '200':
           description: Random problem generated
+
+  /anagram:
+    post:
+      tags:
+        - Anagram
+
+      summary: Solve or generate anagrams
+
+      operationId: anagramSolver
+
+      security:
+        - bearerAuth: []
+
+      requestBody:
+        required: true
+
+        content:
+          application/json:
+            schema:
+              type: object
+
+              properties:
+                word:
+                  type: string
+                  example: "triangle"
+
+      responses:
+        '200':
+          description: Anagram response returned
+
+  /define:
+    post:
+      tags:
+        - Define
+
+      summary: Define a mathematical term
+
+      operationId: defineTerm
+
+      security:
+        - bearerAuth: []
+
+      requestBody:
+        required: true
+
+        content:
+          application/json:
+            schema:
+              type: object
+
+              properties:
+                term:
+                  type: string
+                  example: "Pythagorean theorem"
+
+      responses:
+        '200':
+          description: Definition returned successfully
+
+  /products:
+    get:
+      tags:
+        - Products
+
+      summary: Retrieve product listings
+
+      operationId: getProducts
+
+      security:
+        - bearerAuth: []
+
+      responses:
+        '200':
+          description: Product list returned successfully
+
+  /subjects:
+    get:
+      tags:
+        - Subjects
+
+      summary: Retrieve educational subjects
+
+      operationId: getSubjects
+
+      security:
+        - bearerAuth: []
+
+      responses:
+        '200':
+          description: Subject list returned successfully
+
+  /sudoku:
+    post:
+      tags:
+        - Sudoku
+
+      summary: Generate a sudoku puzzle
+
+      operationId: generateSudoku
+
+      security:
+        - bearerAuth: []
+
+      requestBody:
+        required: false
+
+        content:
+          application/json:
+            schema:
+              type: object
+
+              properties:
+                difficulty:
+                  type: string
+                  example: "medium"
+
+      responses:
+        '200':
+          description: Sudoku puzzle generated successfully
 
 components:
 
