@@ -1,0 +1,131 @@
+openapi: 3.1.0
+
+info:
+  title: MathCelebrity API
+  version: 1.0.0
+  description: |
+    Official MathCelebrity API for solving math problems,
+    generating quizzes, and educational automation.
+
+  contact:
+    name: MathCelebrity
+    url: https://www.mathcelebrity.com
+    email: don@mathcelebrity.com
+
+servers:
+  - url: https://api.mathcelebrity.com
+
+tags:
+  - name: Solve
+    description: Solve math problems
+  - name: Quiz
+    description: Generate quizzes
+  - name: Random
+    description: Random math generation
+
+paths:
+
+  /solve:
+    post:
+      tags:
+        - Solve
+
+      summary: Solve a math problem
+
+      operationId: solveProblem
+
+      security:
+        - bearerAuth: []
+
+      requestBody:
+        required: true
+
+        content:
+          application/json:
+            schema:
+              type: object
+
+              properties:
+                problem:
+                  type: string
+                  example: "2x + 5 = 15"
+
+      responses:
+        '200':
+          description: Successful response
+
+          content:
+            application/json:
+              schema:
+                type: object
+
+                properties:
+                  problem:
+                    type: string
+
+                  solution:
+                    type: string
+
+                  steps:
+                    type: array
+
+                    items:
+                      type: string
+
+  /quiz:
+    post:
+      tags:
+        - Quiz
+
+      summary: Generate a quiz
+
+      operationId: generateQuiz
+
+      security:
+        - bearerAuth: []
+
+      requestBody:
+        required: false
+
+        content:
+          application/json:
+            schema:
+              type: object
+
+              properties:
+                topic:
+                  type: string
+                  example: "algebra"
+
+                difficulty:
+                  type: string
+                  example: "easy"
+
+      responses:
+        '200':
+          description: Quiz generated successfully
+
+  /random:
+    post:
+      tags:
+        - Random
+
+      summary: Generate a random problem
+
+      operationId: randomProblem
+
+      security:
+        - bearerAuth: []
+
+      responses:
+        '200':
+          description: Random problem generated
+
+components:
+
+  securitySchemes:
+
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: APIKey
