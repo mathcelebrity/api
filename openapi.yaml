@@ -13,6 +13,10 @@ info:
     url: https://www.mathcelebrity.com
     email: don@mathcelebrity.com
 
+  externalDocs:
+    description: Official API Documentation
+    url: https://www.mathcelebrity.com/apidocs.php
+
 servers:
   - url: https://api.mathcelebrity.com
 
