@@ -50,6 +50,11 @@ Sign up here:
 - Python: https://github.com/mathcelebrity/python-sdk
 - PHP: https://github.com/mathcelebrity/php-sdk
 
+## Install Packages
+- Node.js: npm install mathcelebrity-sdk
+- Python: pip install mathcelebrity
+- PHP: composer require mathcelebrity/sdk
+
 ### 2. Example Request
 
 ```bash
