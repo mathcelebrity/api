@@ -12,7 +12,7 @@ MathCelebrity API
 ---
 
 ## Release Notes
-👉 [https://www.mathcelebrity.com/apidocs.php](https://api.mathcelebrity.com/release-notes.php)
+👉 https://api.mathcelebrity.com/release-notes.php
 
 ---
 
