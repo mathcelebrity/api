@@ -11,6 +11,11 @@ MathCelebrity API
 
 ---
 
+## Release Notes
+👉 [https://www.mathcelebrity.com/apidocs.php](https://api.mathcelebrity.com/release-notes.php)
+
+---
+
 ## ✨ What This API Does
 
 The MathCelebrity API allows developers, platforms, and AI agents to:
